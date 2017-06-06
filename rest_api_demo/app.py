@@ -32,6 +32,8 @@ def initialize_app(flask_app):
     flask_app.register_blueprint(blueprint)
 
     db.init_app(flask_app)
+    with flask_app.app_context():
+        db.create_all(flask_app)
 
 
 def main():
