@@ -33,7 +33,7 @@ def initialize_app(flask_app):
 
     db.init_app(flask_app)
     with flask_app.app_context():
-        db.create_all(flask_app)
+        db.create_all()
 
 
 def main():
